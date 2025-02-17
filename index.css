@@ -29,10 +29,8 @@ h1 {
 
 button {
     color: #016f32;
-    width: 150px;
     background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding:10px;
     font-weight: bold;
     border: none;
     border-radius: 2px;
