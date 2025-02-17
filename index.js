@@ -1,5 +1,5 @@
 let player = {
-    name: "Per",
+    name: "You",
     chips: 200
 }
 
@@ -48,6 +48,9 @@ function startGame() {
     dealerSum = dealerFirstCard + dealerSecondCard
     
     renderGame()
+    
+    document.querySelector("button[onclick='newCard()']").disabled = false;
+    document.querySelector("button[onclick='endGame()']").disabled = false;
 }
 
 function renderGame() {
