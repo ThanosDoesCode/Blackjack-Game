@@ -3,6 +3,13 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+         <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>Blackjack</h1>
+        <button id="startgame-btn" onclick="startGame()">START GAME</button>
+    </div>
+        <!-- Game Screen (Initially hidden) -->
+    <div id="game-screen" style="display: none;">
         <h1>Blackjack</h1>
         <p id="message-el">Want to play a round?</p>
         
@@ -13,10 +20,11 @@
         <h2>Players Hand</h2>
         <p id="player-cards-el">Player Cards:</p>
         <p id="player-sum-el">Player Sum:</p>
-        <button onclick="startGame()">START GAME</button>
+        <button onclick="startGame()">NEW ROUND</button>
         <button onclick="newCard()">NEW CARD</button>
         <button onclick="endGame()">STAND</button>
         <p id="player-el"></p>
         <script src="index.js"></script>
+    </div>
     </body>
 </html>
