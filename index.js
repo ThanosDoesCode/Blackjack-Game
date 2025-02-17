@@ -34,6 +34,9 @@ function startGame() {
     isAlive = true
     hasBlackJack = false
     
+    document.getElementById("welcome-screen").style.display = "none";
+    document.getElementById("game-screen").style.display = "block";
+    
     let playerFirstCard = getRandomCard()
     let playerSecondCard = getRandomCard()
     playerCards = [playerFirstCard, playerSecondCard]
@@ -97,10 +100,13 @@ function dealerTurn() {
 }
 
 function endGame() {
-    if (playerSum <= 21){
+    if(playerSum <= 21){
         dealerTurn()
     } 
     renderGame()
+    
+    document.querySelector("button[onclick='newCard()']").disabled = true;
+    document.querySelector("button[onclick='endGame()']").disabled = true;
     
     dealerCardsEl.textContent = "Dealer Cards: " + dealerCards.join(" ")
     dealerSumEl.textContent = "Dealer Sum: " + dealerSum
